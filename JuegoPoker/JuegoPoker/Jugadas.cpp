@@ -15,5 +15,5 @@ void Jugadas::establecerCalificacion(float)
 
 float Jugadas::compararJugadas()
 {
-	return 0.0f;
+	return 0;
 }

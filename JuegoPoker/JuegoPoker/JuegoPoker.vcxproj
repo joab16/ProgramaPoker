@@ -145,7 +145,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cartas.h" />
+    <ClInclude Include="Carta.h" />
     <ClInclude Include="Dealer.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="Jugadas.h" />
@@ -155,7 +155,7 @@
     <ClInclude Include="TipoJugador.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cartas.cpp" />
+    <ClCompile Include="Carta.cpp" />
     <ClCompile Include="Dealer.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="JuegoPoker.cpp" />

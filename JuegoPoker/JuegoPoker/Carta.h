@@ -1,6 +1,6 @@
 #pragma once
 
-class Cartas
+class Carta
 {
 private:
 
@@ -9,10 +9,10 @@ private:
 	const int CORAZONES = 3;
 	const int TREBOLES = 4;
 
-	int numeroCartas;
+	int numeroCarta;
 	int palo;
 
 public:
-	Cartas();
-	~Cartas();
+	Carta(int, int);
+	~Carta();
 };
