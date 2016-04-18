@@ -21,7 +21,7 @@ public:
 
 	void revolverBaraja();
 
-	int repetido(int);
+	void llenarPosiciones();
 
 };
 

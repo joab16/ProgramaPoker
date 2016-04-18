@@ -29,29 +29,49 @@ Carta Deck::obtenerCarta()
 
 void Deck::revolverBaraja()
 {
-	int posicion;
 	list<Carta> lista;
+	llenarPosiciones();
+	int posicion = 0;
 
 	for (list<Carta>::iterator it = deck.begin(); it != deck.end(); ++it){
-		posicion = rand() % 55;
-		v[i] = posicion;
+		lista.insert(v[posicion], *it);
 		i++;
-		if ((repetido(posicion) == 0);
-		lista.insert(posicion, *it);
-		else
-			it--;
 	}
 	deck = lista;
 }
 
-int repetido(int posicion)
+void Deck::llenarPosiciones ()
 	{
-		int repeat = 0;
-		for (int j = 1; j <= 54; j++) {
-			if (posicion != v[j])
-				repeat = repeat + 0;
+		int posicion;
+		int repetido;
+
+		for (int i = 0; i < 26; i++) {
+			posicion= rand() % 26;
+			repetido = 0;
+			for (int j = 0; j <= i; j++) {
+				if (posicion == v[j]) {
+					repetido = 1;
+					break;
+				}
+			}
+			if (repetido == 1)
+				i--;
 			else
-				repeat = repeat + 1;
+				v[i] = posicion;
 		}
-		return repeat;
+
+		for (int i = 26; i < 54; i++) {
+			posicion = rand() % 26 + 26;
+			repetido = 0;
+			for (int j = 26; j <= i; j++) {
+				if (posicion == v[j]) {
+					repetido = 1;
+					break;
+				}
+			}
+			if (repetido == 1)
+				i--;
+			else
+				v[i] = posicion;
+		}
 	}
