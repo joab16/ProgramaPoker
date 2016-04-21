@@ -11,5 +11,9 @@
 #include <tchar.h>
 
 // TODO: reference additional headers your program requires here
+<<<<<<< HEAD
 #include <iostream>
+=======
+#include <iostream>;
+>>>>>>> master
 #include <list>

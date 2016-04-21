@@ -8,7 +8,11 @@ class Deck
 private:
 
 	list<Carta> deck;
+<<<<<<< HEAD
 	Carta *carta;
+=======
+	Carta * carta;
+>>>>>>> master
 	int cartasRestantes;
 	int v[53];
 

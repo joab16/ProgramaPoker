@@ -1,5 +1,10 @@
 #include "stdafx.h"
 #include "Deck.h"
+#include <cstdlib> 
+#include <ctime> 
+#include <algorithm> 
+#include <random>
+using namespace std;
 
 Deck::Deck()
 {
@@ -14,21 +19,35 @@ Deck::Deck()
 			deck.push_back(*carta);
 		}
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> master
 }
 
 Deck::~Deck()
 {
+<<<<<<< HEAD
 	delete *carta;
+=======
+	delete carta;
+>>>>>>> master
 }
 
 Carta Deck::obtenerCarta()
 {
+<<<<<<< HEAD
 	return deck.begin();
+=======
+	
+	return deck.front(); // Devuelve la primera carta.
+>>>>>>> master
 }
-
+ 
 void Deck::revolverBaraja()
 {
+<<<<<<< HEAD
 	list<Carta> lista;
 	llenarPosiciones();
 	int posicion = 0;
@@ -75,3 +94,31 @@ void Deck::llenarPosiciones ()
 				v[i] = posicion;
 		}
 	}
+=======
+	Carta v[53];
+	list<Carta>::iterator it = deck.begin();
+	int j = 0;	
+	list<Carta> nueva(53);
+
+	for ( int i = 0; i < 53; i++)
+		v[i] = *it;
+	
+	auto engine = default_random_engine{};
+	shuffle(begin(v), end(v), engine);
+
+	for (int i = 0; i <= 53 ; i++) {
+		nueva.push_back(v[i]);
+	}
+
+	deck = nueva;
+	
+}
+
+void Carta::operator=(Carta & otra)
+{
+	this->numeroCarta = otra.numeroCarta;
+	this->palo = otra.palo;
+}
+
+
+>>>>>>> master
