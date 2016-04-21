@@ -21,8 +21,6 @@ public:
 
 	void revolverBaraja();
 
-	void llenarPosiciones();
-
 };
 
 

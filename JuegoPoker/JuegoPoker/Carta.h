@@ -14,5 +14,7 @@ private:
 
 public:
 	Carta(int, int);
+	Carta();
 	~Carta();
+	void operator=(Carta &);
 };
