@@ -7,6 +7,10 @@ Carta::Carta(int numero, int palo)
 	this->palo = palo;
 }
 
+Carta::Carta()
+{
+}
+
 Carta::~Carta()
 {
 }

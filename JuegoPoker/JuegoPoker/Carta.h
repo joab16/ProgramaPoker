@@ -14,9 +14,11 @@ private:
 
 public:
 	Carta(int numero, int palo);
+	Carta();
 	~Carta();
 
 	int obtenerNumeroCarta();
 	int obtenerPalo();
+	void operator=(Carta &);
 };
 
