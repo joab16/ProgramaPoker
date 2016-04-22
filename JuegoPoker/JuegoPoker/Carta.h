@@ -13,10 +13,8 @@ private:
 	int palo;
 
 public:
-	Carta(int numero, int palo);
+	Carta(int, int);
+	Carta();
 	~Carta();
-
-	int obtenerNumeroCarta();
-	int obtenerPalo();
+	void operator=(Carta &);
 };
-

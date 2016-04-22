@@ -1,10 +1,12 @@
 #pragma once
+#include "Jugador.h"
+#include "Deck.h"
 
 class Dealer
 {
 private:
 	int turnoActual;
-	//list cartasComunitarias;
+	list<Deck*> comunitarias;
 	int bote;
 	int ciegaPequenna;
 	int ciegaGrande;
@@ -21,9 +23,9 @@ public:
 
 	void solicitarDecisiones();
 
-	char* seleccionarGanador();
+	char* seleccionarGanador(list<Deck*> manos);
 
 	void repartirDinero();
 
-	void revelar();
+	list<Deck*> revelar();
 };
