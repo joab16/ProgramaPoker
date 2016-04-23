@@ -14,57 +14,61 @@ void Jugadas::establecerCalificacion(float calificacion)
 	this -> calificacion = calificacion;
 }
 
-float Jugadas::compararJugadas()
+float Jugadas::compararJugadas(Deck mano1[], Deck mano2[])
 {
 	return 0.0f;
 }
 
-int Jugadas::esFlorImperial()
+int Jugadas::esFlorImperial(Deck mano[])
+{
+	for (int i = 0; i < 8; i++)
+	{
+		mano[1].obtenerCarta
+	}
+	return 0;
+}
+
+int Jugadas::esEscaleraColor(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esEscaleraColor()
+int Jugadas::esPoker(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esPoker()
+int Jugadas::esFull(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esFull()
+int Jugadas::esColor(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esColor()
+int Jugadas::esEscalera(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esEscalera()
+int Jugadas::esTrio(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esTrio()
+int Jugadas::esDoblePareja(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esDoblePareja()
+int Jugadas::esPareja(Deck mano[])
 {
 	return 0;
 }
 
-int Jugadas::esPareja()
-{
-	return 0;
-}
-
-int Jugadas::esCartaAlta()
+int Jugadas::esCartaAlta(Deck mano[])
 {
 	return 0;
 }

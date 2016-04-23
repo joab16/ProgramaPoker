@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Deck.h"
+
 class Jugadas
 {
 private:
@@ -13,25 +15,25 @@ public:
 
 	void establecerCalificacion(float);
 
-	float compararJugadas(/*list, list*/);
+	float compararJugadas(Deck mano1[], Deck mano2[]);
 
-	int esFlorImperial(/*list*/);
+	int esFlorImperial(Deck mano[]);
 
-	int esEscaleraColor(/*list*/);
+	int esEscaleraColor(Deck mano[]);
 
-	int esPoker(/*list*/);
+	int esPoker(Deck mano[]);
 
-	int esFull(/*list*/);
+	int esFull(Deck mano[]);
 
-	int esColor(/*list*/);
+	int esColor(Deck mano[]);
 
-	int esEscalera(/*list*/);
+	int esEscalera(Deck mano[]);
 
-	int esTrio(/*list*/);
+	int esTrio(Deck mano[]);
 
-	int esDoblePareja(/*list*/);
+	int esDoblePareja(Deck mano[]);
 
-	int esPareja(/*list*/);
+	int esPareja(Deck mano[]);
 
-	int esCartaAlta(/*list*/);
+	int esCartaAlta(Deck mano[]);
 };
