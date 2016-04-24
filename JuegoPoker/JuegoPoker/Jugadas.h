@@ -13,6 +13,8 @@ public:
 
 	~Jugadas();
 
+	float establecerPorcentajeExito(Deck mano[]);
+
 	void establecerCalificacion(float);
 
 	float compararJugadas(Deck mano1[], Deck mano2[]);
