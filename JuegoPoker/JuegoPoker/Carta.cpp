@@ -7,10 +7,10 @@ Carta::Carta(int numero, int palo)
 	this->palo = palo;
 }
 
-Carta::~Carta()
+Carta::Carta()
 {
 }
 
-int Carta::obtenerNumeroCarta() {
-	return this->numeroCarta;
+Carta::~Carta()
+{
 }
