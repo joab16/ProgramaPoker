@@ -1,3 +1,7 @@
+/**
+* @class Almendro
+* @brief Atributos del arbol Almendro. Hija de Arbol.
+*/
 #pragma once
 #include "stdafx.h"
 #include "Carta.h"
@@ -7,19 +11,21 @@ class Deck
 {
 private:
 
-	list<Carta> deck;
-	Carta *carta;
-	int cartasRestantes;
-	int v[53];
+	list<Carta*> deck; /*!< lista Carta* deck*/
+
+	Carta *carta; /*!< varible Carta* Carta */
 
 public:
+
 	Deck();
 
 	~Deck();
 
-	Carta obtenerCarta();
+	Carta* obtenerCarta();
 
 	void revolverBaraja();
+
+	/*void imprimir();*/
 
 };
 

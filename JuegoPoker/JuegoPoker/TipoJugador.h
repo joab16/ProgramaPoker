@@ -2,20 +2,23 @@
 #include "Jugador.h"
 #include "Deck.h"
 
-class TipoJugador
-{
+class TipoJugador {
 private:
 	int apuestaMinima;
 	int apuestaMaxima;
-	float probabilidadMinimaRetiro;
-	//Deck
-	list<Deck*> mejorJugada;
+	list<Deck> mejorJugada;
 	float probabilidadGane;
 
 public:
+	TipoJugador();
+
 	TipoJugador(int, int, float);
 
 	~TipoJugador();
+
+	float probabilidadMinimaRetiro;
+
+	int tomarDecision(float);
 
 	list<Deck*> revelar();
 
@@ -23,3 +26,4 @@ public:
 
 	list<Deck*> encontrarMejorJugada(list<Deck*> &, list<Deck*> &);
 };
+

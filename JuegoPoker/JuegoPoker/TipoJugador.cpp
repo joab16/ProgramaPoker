@@ -3,6 +3,7 @@
 
 TipoJugador::TipoJugador()
 {
+
 }
 
 TipoJugador::~TipoJugador()
