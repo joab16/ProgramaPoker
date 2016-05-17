@@ -12,9 +12,12 @@ private:
 	int ciegaGrande;
 	int apuestaPequenna;
 	int apuestaGrande;
+	int numeroJugadores;
+	Deck* deck;
+	list<TipoJugador> jugadores;
 
 public:
-	Dealer();
+	Dealer(int ciegaPequenna, int numeroJugadores);
 	~Dealer();
 
 	void inicializarJuego();
