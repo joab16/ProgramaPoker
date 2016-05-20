@@ -1,17 +1,21 @@
 #include "stdafx.h"
 #include "Jugador.h"
 
-Jugador::Jugador(char * nombre, int dinero, Carta carta1, Carta carta2)
+void Jugador::llenarMano(Carta * carta)
+{
+	mano.push_front(carta);
+}
+
+Jugador::Jugador(char * nombre, int dinero)
 {
 	this->nombre = nombre;
 	this->dineroRestante = dinero;
 	this->tipo = new TipoJugador();
-	mano.push_back(carta1);
-	mano.push_back(carta1);
 }
 
 Jugador::~Jugador()
 {
+	delete tipo;
 }
 
 bool Jugador::tomarDecision(float calificacion)
@@ -24,7 +28,7 @@ bool Jugador::tomarDecision(float calificacion)
 	return decision;
 }
 
-list<Carta> Jugador::revelar()
+list<Carta*> Jugador::revelar()
 {
 	return mano;
 }

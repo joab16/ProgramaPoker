@@ -1,35 +1,29 @@
 #include "stdafx.h"
-#include "Dealer.h"
+#include "Jugador.h"
 
-Dealer::Dealer()
+void Jugador::llenarMano(Carta * carta)
 {
+	mano.push_front(carta);
 }
 
-Dealer::~Dealer()
+Jugador::Jugador(char * nombre, int dinero)
 {
+	this->nombre = nombre;
+	this->dineroRestante = dinero;
+	this->tipo = new TipoJugador();
 }
 
-void Dealer::inicializarJuego()
+Jugador::~Jugador()
 {
+	delete tipo;
 }
 
-void Dealer::repartirCartas()
+bool Jugador::tomarDecision(float calificacion)
 {
-}
-
-void Dealer::solicitarDecisiones()
-{
-}
-
-char * Dealer::seleccionarGanador()
-{
-	return nullptr;
-}
-
-void Dealer::repartirDinero()
-{
-}
-
-void Dealer::revelar()
-{
+	bool decision;
+	if (calificacion <= tipo->probabilidadMinimaRetiro)
+		decision = false;
+	else
+		decision = true;
+	return decision;
 }

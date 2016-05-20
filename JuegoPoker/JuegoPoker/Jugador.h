@@ -16,20 +16,24 @@ private:
 
 	int dineroRestante;
 
-	list<Carta> mano;
+	list<Carta*> mano;
 
 	bool decision;
 
 	TipoJugador * tipo;
 
+
+
 public:
 
-	Jugador(char*, int, Carta, Carta);
+	Jugador(char*, int);
 
 	~Jugador();
 
 	bool tomarDecision(float);
 
-	list<Carta> revelar();
+	void llenarMano(Carta *);
+
+	list<Carta*> revelar();
 
 };
