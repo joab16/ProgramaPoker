@@ -2,6 +2,7 @@
 #include "Dealer.h"
 #include "Carta.h"
 #include "TipoJugador.h"
+#include "Deck.h"
 
 Dealer::Dealer(int ciegaPequenna, int numeroJugadores)
 {
@@ -10,7 +11,7 @@ Dealer::Dealer(int ciegaPequenna, int numeroJugadores)
 	this->numeroJugadores = numeroJugadores;
 	this->deck = new Deck();
 	for (int i = 0; i < numeroJugadores; i++) {
-		jugadores.pop_front(TipoJugador(0,0,0.0));
+		jugadores.push_front(new Jugador("jugador",10000));
 	}
 
 }
@@ -24,12 +25,12 @@ void Dealer::inicializarJuego()
 	turnoActual = 0;
 	bote = 0;
 	for (int i = 0; i < 3; i++) {
-		comunitarias.push_front(deck.obtenerCarta());
+		comunitarias.push_front(deck->obtenerCarta());
 	}
-	repartirCartas();
+	repartirCartas(0);
 }
 
-void Dealer::repartirCartas()
+void Dealer::repartirCartas(int turno)
 {
 }
 
@@ -37,20 +38,14 @@ void Dealer::solicitarDecisiones()
 {
 }
 
-char * Dealer::seleccionarGanador(list<Deck*> manos)
-{
-	return nullptr;
-}
-
 char * Dealer::seleccionarGanador()
 {
 	return nullptr;
 }
 
+
 void Dealer::repartirDinero()
 {
 }
 
-void Dealer::revelar()
-{
-}
+

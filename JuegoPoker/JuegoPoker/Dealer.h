@@ -6,7 +6,7 @@ class Dealer
 {
 private:
 	int turnoActual;
-	list<Deck*> comunitarias;
+	list<Carta*> comunitarias;
 	int bote;
 	int ciegaPequenna;
 	int ciegaGrande;
@@ -14,7 +14,7 @@ private:
 	int apuestaGrande;
 	int numeroJugadores;
 	Deck* deck;
-	list<TipoJugador> jugadores;
+	list<Jugador*> jugadores;
 
 public:
 	Dealer(int ciegaPequenna, int numeroJugadores);
@@ -22,13 +22,13 @@ public:
 
 	void inicializarJuego();
 
-	void repartirCartas();
+	void repartirCartas(int turno);
 
 	void solicitarDecisiones();
 
-	char* seleccionarGanador(list<Deck*> manos);
+	char* seleccionarGanador();
 
 	void repartirDinero();
 
-	list<Deck*> revelar();
+	
 };

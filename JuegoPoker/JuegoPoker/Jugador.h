@@ -1,21 +1,35 @@
 #pragma once
+
+#include "stdafx.h"
 #include "TipoJugador.h"
-#include "Deck.h"
+#include "Carta.h"
+
+using namespace std;
+
+class TipoJugador;
 
 class Jugador
 {
 private:
+
 	char* nombre;
+
 	int dineroRestante;
-	list<Deck*> mano//list mano;
-	//int apuesta;
+
+	list<Carta> mano;
+
 	bool decision;
+
+	TipoJugador * tipo;
+
 public:
+
 	Jugador(char*, int);
 
 	~Jugador();
 
 	bool tomarDecision(float);
 
-	list<Deck*> revelar();
+	list<Carta> revelar();
+
 };

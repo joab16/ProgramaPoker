@@ -7,8 +7,8 @@ class Deck
 {
 private:
 
-	list<Carta> deck;
-	Carta *carta;
+	list<Carta*> deck;
+	Carta * carta;
 	int cartasRestantes;
 	int v[53];
 
@@ -17,7 +17,7 @@ public:
 
 	~Deck();
 
-	Carta obtenerCarta();
+	Carta * obtenerCarta();
 
 	void revolverBaraja();
 
