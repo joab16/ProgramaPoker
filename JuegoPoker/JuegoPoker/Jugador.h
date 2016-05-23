@@ -12,17 +12,13 @@ class Jugador
 {
 private:
 
-	char* nombre;
+
 
 	int dineroRestante;
 
-	list<Carta*> mano;
-
-	bool decision;
+	int decision;
 
 	TipoJugador * tipo;
-
-
 
 public:
 
@@ -30,10 +26,13 @@ public:
 
 	~Jugador();
 
-	bool tomarDecision(float);
+	int tomarDecision(float);
 
-	void llenarMano(Carta *);
+	void añadirAMano(Carta *);
 
-	list<Carta*> revelar();
+	int apuesta;
 
+	list<Carta*> mano;
+
+	char* nombre;
 };

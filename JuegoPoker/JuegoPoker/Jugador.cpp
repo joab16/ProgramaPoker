@@ -1,11 +1,6 @@
 #include "stdafx.h"
 #include "Jugador.h"
 
-void Jugador::llenarMano(Carta * carta)
-{
-	mano.push_front(carta);
-}
-
 Jugador::Jugador(char * nombre, int dinero)
 {
 	this->nombre = nombre;
@@ -18,17 +13,21 @@ Jugador::~Jugador()
 	delete tipo;
 }
 
-bool Jugador::tomarDecision(float calificacion)
+int Jugador::tomarDecision(float calificacion)
 {
-	bool decision;
 	if (calificacion <= tipo->probabilidadMinimaRetiro)
-		decision = false;
+		decision = 1;
+	else if (calificacion == 1)
+	{
+		decision = 2;
+		this->apuesta = 10; //no estoy clara cuánto puede subir.
+	}
 	else
-		decision = true;
+		decision = 0;
 	return decision;
 }
 
-list<Carta*> Jugador::revelar()
+void Jugador::añadirAMano(Carta * carta)
 {
-	return mano;
+	mano.push_front(carta);
 }
