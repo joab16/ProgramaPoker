@@ -3,7 +3,6 @@
 
 TipoJugador::TipoJugador()
 {
-
 }
 
 TipoJugador::TipoJugador(int, int, float)
