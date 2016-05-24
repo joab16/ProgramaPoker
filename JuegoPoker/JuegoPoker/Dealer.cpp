@@ -1,11 +1,16 @@
 #include "stdafx.h"
+<<<<<<< HEAD
 #include "Dealer.h"
 #include "Carta.h"
 #include "TipoJugador.h"
 #include "Deck.h"
+=======
+#include "Jugador.h"
+>>>>>>> 3ef8428f9ffab0b13a45bbaac9aa6ca1a8e853b0
 
-Dealer::Dealer(int ciegaPequenna, int numeroJugadores)
+void Jugador::llenarMano(Carta * carta)
 {
+<<<<<<< HEAD
 	this->ciegaPequenna = ciegaPequenna;
 	this->ciegaGrande = 2*ciegaPequenna;
 	this->numeroJugadores = numeroJugadores;
@@ -28,10 +33,26 @@ void Dealer::inicializarJuego()
 		comunitarias.push_front(deck->obtenerCarta());
 	}
 	repartirCartas(0);
+=======
+	mano.push_front(carta);
 }
 
-void Dealer::repartirCartas(int turno)
+Jugador::Jugador(char * nombre, int dinero)
 {
+	this->nombre = nombre;
+	this->dineroRestante = dinero;
+	this->tipo = new TipoJugador();
+}
+
+Jugador::~Jugador()
+{
+	delete tipo;
+>>>>>>> 3ef8428f9ffab0b13a45bbaac9aa6ca1a8e853b0
+}
+
+bool Jugador::tomarDecision(float calificacion)
+{
+<<<<<<< HEAD
 }
 
 void Dealer::solicitarDecisiones()
@@ -49,3 +70,12 @@ void Dealer::repartirDinero()
 }
 
 
+=======
+	bool decision;
+	if (calificacion <= tipo->probabilidadMinimaRetiro)
+		decision = false;
+	else
+		decision = true;
+	return decision;
+}
+>>>>>>> 3ef8428f9ffab0b13a45bbaac9aa6ca1a8e853b0

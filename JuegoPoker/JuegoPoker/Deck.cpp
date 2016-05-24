@@ -68,6 +68,7 @@ void Deck::revolverBaraja()
 list<Carta*>::iterator it = deck.begin();
 int j = 0;
 list<Carta*> nueva(54);
+<<<<<<< HEAD
 for (int i = 0; i < 53; i++)
 v[i] = *it;
 auto engine = default_random_engine{};
@@ -77,6 +78,21 @@ nueva.push_back(v[i]);
 }
 deck = nueva;*/
 
+=======
+
+for (int i = 0; i < 53; i++)
+v[i] = *it;
+
+auto engine = default_random_engine{};
+shuffle(begin(v), end(v), engine);
+
+for (int i = 0; i <= 53; i++) {
+nueva.push_back(v[i]);
+}
+
+deck = nueva;*/
+
+>>>>>>> 3ef8428f9ffab0b13a45bbaac9aa6ca1a8e853b0
 //void Deck::imprimir()
 //{
 //	for (list<Carta*>::iterator it = deck.begin(); it != deck.end(); ++it) {

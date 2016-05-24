@@ -19,6 +19,11 @@ public:
 	float probabilidadMinimaRetiro;
 
 	int tomarDecision(float);
+<<<<<<< HEAD
+=======
+
+	list<Deck*> revelar();
+>>>>>>> 3ef8428f9ffab0b13a45bbaac9aa6ca1a8e853b0
 
 	float analizarProbabilidad(list<Deck*> &);
 
