@@ -14,3 +14,8 @@ Carta::Carta()
 Carta::~Carta()
 {
 }
+
+ostream & operator<<(ostream &cadena, Carta &carta)
+{
+	return cadena << "Numero: " << carta.numeroCarta << "\t Palo: " << carta.palo << endl;
+}

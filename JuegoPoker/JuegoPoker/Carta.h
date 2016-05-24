@@ -1,7 +1,9 @@
 #pragma once
+using namespace std;
 
 class Carta
 {
+	friend ostream & operator<<(ostream &, Carta &);
 private:
 
 	const int DIAMANTES = 1;
@@ -18,3 +20,5 @@ public:
 	~Carta();
 	void operator=(Carta &);
 };
+
+ostream & operator<<(ostream &, Carta &);
