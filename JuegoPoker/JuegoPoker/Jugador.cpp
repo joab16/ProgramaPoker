@@ -6,10 +6,6 @@ Jugador::Jugador(char * nombre, int dinero)
 	this->nombre = nombre;
 	this->dineroRestante = dinero;
 	this->tipo = new TipoJugador();
-<<<<<<< HEAD
-=======
-	
->>>>>>> master
 }
 
 Jugador::~Jugador()
@@ -34,19 +30,4 @@ int Jugador::tomarDecision(float calificacion)
 void Jugador::añadirAMano(Carta * carta)
 {
 	mano.push_front(carta);
-}
-
-bool Jugador::tomarDecision(float calificacion)
-{
-	bool decision;
-	if (calificacion <= tipo->probabilidadMinimaRetiro)
-		decision = false;
-	else
-		decision = true;
-	return decision;
-}
-
-list<Carta> Jugador::revelar()
-{
-	return mano;
 }
