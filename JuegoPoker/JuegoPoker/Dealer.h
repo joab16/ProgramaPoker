@@ -1,37 +1,32 @@
 #pragma once
-
-#include "Jugadas.h"
 #include "Jugador.h"
 #include "Deck.h"
 
 class Dealer
 {
-	friend class PruebaDealer;
 private:
 	int turnoActual;
-	Deck * deck;
+	Deck * nuevoJuego;
 	list<Carta*> comunitarias; // era list<Deck*>.
-	list<Jugador*> jugadores;
+	list<Jugador*> participantes;
+	Jugador * participante;
 	int bote = 0;
 	int ciegaPequenna;
 	int ciegaGrande;
 	int apuestaPequenna;
 	int apuestaGrande;
 	int ronda = 1; //ronda que se va jugando.
-	int numeroJugadores;
 
 public:
-
-	Dealer();
-	Dealer(int, int);
+	Dealer(int, char *);
 
 	~Dealer();
 
-	void inicializarJuego(int, int);
+	void inicializarJuego(int, char *);
 
 	void repartirCartas();
 
-	bool solicitarDecisiones(Jugador * it);
+	void solicitarDecisiones();
 
 	char* seleccionarGanador(list<Deck*> manos);
 

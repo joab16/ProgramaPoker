@@ -17,7 +17,7 @@ Deck::Deck()
 			deck.push_back(carta);
 		}
 	}
-	revolverBaraja();
+
 }
 
 /**
@@ -31,15 +31,12 @@ Deck::~Deck()
 Carta * Deck::obtenerCarta()
 {
 	list<Carta*>::iterator it = deck.begin();
-	Carta * tmp;
-	if (!(deck.empty()))
+	if (*it != nullptr)
 	{
-		tmp = *it;
+		*it = deck.front();
 		deck.pop_front();
 	}
-	else
-		tmp = nullptr;
-	return tmp; // Devuelve la primera carta y la elimina del deck.
+	return *it; // Devuelve la primera carta y la elimina del deck.
 }
 
 //Tomado del ejemplo en clase del profesor Ruben Jimenez.
@@ -84,9 +81,9 @@ nueva.push_back(v[i]);
 
 deck = nueva;*/
 
-void Deck::imprimir()
-{
-	for (list<Carta*>::iterator it = deck.begin(); it != deck.end(); ++it) {
-		cout << "La carta vale: " << (*it)->getValor() << endl;
-	}
-}
+//void Deck::imprimir()
+//{
+//	for (list<Carta*>::iterator it = deck.begin(); it != deck.end(); ++it) {
+//		cout << "La carta vale: " << (*it)->getValor() << endl;
+//	}
+//}

@@ -1,6 +1,6 @@
 /**
-* @class Deck
-* @brief Lista de cartas para el juego.
+* @class Almendro
+* @brief Atributos del arbol Almendro. Hija de Arbol.
 */
 #pragma once
 #include "stdafx.h"
@@ -25,7 +25,7 @@ public:
 
 	void revolverBaraja();
 
-	void imprimir();
+	/*void imprimir();*/
 
 };
 
