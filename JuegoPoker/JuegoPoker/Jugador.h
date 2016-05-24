@@ -12,11 +12,21 @@ class Jugador
 {
 private:
 
+<<<<<<< HEAD
 
 
 	int dineroRestante;
 
 	int decision;
+=======
+	char* nombre;
+
+	int dineroRestante;
+
+	list<Carta> mano;
+
+	bool decision;
+>>>>>>> master
 
 	TipoJugador * tipo;
 
@@ -30,9 +40,15 @@ public:
 
 	void añadirAMano(Carta *);
 
+<<<<<<< HEAD
 	int apuesta;
 
 	list<Carta*> mano;
 
 	char* nombre;
 };
+=======
+	list<Carta> revelar();
+
+};
+>>>>>>> master

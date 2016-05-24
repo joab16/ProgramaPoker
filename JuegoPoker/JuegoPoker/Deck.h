@@ -11,9 +11,16 @@ class Deck
 {
 private:
 
+<<<<<<< HEAD
 	list<Carta*> deck; /*!< lista Carta* deck*/
 
 	Carta *carta; /*!< varible Carta* Carta */
+=======
+	list<Carta*> deck;
+	Carta * carta;
+	int cartasRestantes;
+	int v[53];
+>>>>>>> master
 
 public:
 
@@ -21,7 +28,11 @@ public:
 
 	~Deck();
 
+<<<<<<< HEAD
 	Carta* obtenerCarta();
+=======
+	Carta * obtenerCarta();
+>>>>>>> master
 
 	void revolverBaraja();
 
