@@ -1,22 +1,9 @@
 #include "stdafx.h"
 #include "Dealer.h"
-<<<<<<< HEAD
-=======
-#include "Carta.h"
-#include "TipoJugador.h"
->>>>>>> master
 #include "Deck.h"
 
-Dealer::Dealer(int ciegaPequenna, int numeroJugadores)
+Dealer::Dealer()
 {
-	this->ciegaPequenna = ciegaPequenna;
-	this->ciegaGrande = 2*ciegaPequenna;
-	this->numeroJugadores = numeroJugadores;
-	this->deck = new Deck();
-	for (int i = 0; i < numeroJugadores; i++) {
-		jugadores.push_front(new Jugador("jugador",10000));
-	}
-
 }
 
 Dealer::Dealer(int ciegaPequenna, int numeroJugadores)
@@ -31,7 +18,6 @@ Dealer::~Dealer()
 
 void Dealer::inicializarJuego(int ciegaPequena, int numeroJugador)
 {
-<<<<<<< HEAD
 	deck = new Deck();
 	int dinero;
 	this->ciegaPequenna = ciegaPequena;
@@ -44,17 +30,9 @@ void Dealer::inicializarJuego(int ciegaPequena, int numeroJugador)
 	turnoActual = 0;
 	bote = 0;
 	repartirCartas();
-=======
-	turnoActual = 0;
-	bote = 0;
-	for (int i = 0; i < 3; i++) {
-		comunitarias.push_front(deck->obtenerCarta());
-	}
-	repartirCartas(0);
->>>>>>> master
 }
 
-void Dealer::repartirCartas(int turno)
+void Dealer::repartirCartas()
 {
 
 	for (int i = 0; i < 5; i++) {
@@ -98,12 +76,10 @@ char* Dealer::seleccionarGanador(list<Deck*> manos)
 	return nullptr;
 }
 
-
 void Dealer::repartirDinero()
 {
 }
 
-<<<<<<< HEAD
 void Dealer::llenarBote(int apuesta)
 {
 	bote += apuesta;
@@ -113,6 +89,3 @@ void Dealer::llenarBote(int apuesta)
 //{
 //	return nullptr;
 //}
-=======
-
->>>>>>> master

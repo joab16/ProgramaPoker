@@ -6,10 +6,6 @@ TipoJugador::TipoJugador()
 
 }
 
-TipoJugador::TipoJugador(int, int, float)
-{
-}
-
 TipoJugador::~TipoJugador()
 {
 }
@@ -19,3 +15,6 @@ int TipoJugador::tomarDecision(float)
 	return 0;
 }
 
+void TipoJugador::revelar()
+{
+}
